@@ -27,3 +27,22 @@ document.querySelector("#user-icon").onclick = () => {
     navbar.classList.remove("active");
     menu.classList.remove("move");
 };
+
+// on click on menu links removed menu
+window.onscroll = () => {
+    navbar.classList.remove("active");
+    menu.classList.remove("move");
+};
+
+// change header background color and shadow on scroll
+let header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+    header.classList.toggle("shadow", window.scrollY > 0);
+});
+
+//scroll top
+
+let scrolltop = document.querySelector(".scroll-top");
+window.addEventListener("scroll", () => {
+    scrolltop.classList.toggle("active", window.scrollY > 0);
+});
